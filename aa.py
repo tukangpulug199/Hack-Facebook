@@ -58,13 +58,13 @@ Support : Mr.Lonte
 Name    : PePek Anjink
 Version : v1.9
 ---------------------------------------------""" )
-        print tutup + '\n[' + putih + '$' + tutup + '] LOGIN ACCOUNT FACEBOOK ' + tutup + '[' + putih + '$' + tutup + ']' + tutup
-        usr = raw_input(tutup + '[' + putih + '+' + tutup + '] Username : ' + biru)
-        pwd = raw_input(tutup + '[' + putih + '+' + tutup + '] Password : ' + biru)
+        print tutup + '\n\033[37;1m[' + putih + '\033[36;1m~' + tutup + '\033[37;1m] LOGIN ACCOUNT FACEBOOK ' + tutup + '\033[37;1m[' + putih + '\033[36;1m~' + tutup + '\033[37;1m]' + tutup
+        usr = raw_input(tutup + '\033[37;1m[' + putih + '\033[31;1m+' + tutup + '\033[37;1m] Username : '
+        pwd = raw_input(tutup + '\033[37;1m[' + putih + '\033[31:1m+' + tutup + '\033[37;1m] Password : '
         try:
             sex.open('https://m.facebook.com')
         except mechanize.URLError:
-            exit(tutup + '[' + hijau + '!' + tutup + '] Koneksi Error')
+            exit(tutup + '\033[37;1m[' + hijau + '\033[31;1m*' + tutup + '\033[37;1m] Koneksi Error')
 
         sex._factory.is_html = True
         sex.select_form(nr=0)
@@ -90,14 +90,14 @@ Version : v1.9
                 os.system('xdg-open https://www.youtube.com/channel/UCXsl522DWoCYxQtmm3eqkpw')
                 menu()
             except requests.exceptions.ConnectionError:
-                exit(tutup + '[' + merah + '!' + tutup + '] Koneksi Error')
+                exit(tutup + '\033[37;1m[' + merah + '\033[31;1m*' + tutup + '\033[37;1m] Koneksi Error')
 
         elif 'checkpoint' in ambil:
             os.system('rm -rf logs.txt')
-            exit(tutup + '[' + kuning + '!' + tutup + '] Checkpoint')
+            exit(tutup + '\033[37;1m[' + kuning + '\033[31;1m*' + tutup + '\033[37;1m] Checkpoint')
         else:
             os.system('rm -rf logs.txt')
-            exit(tutup + '[' + merah + '!' + tutup + '] Username/Password Incorrect')
+            exit(tutup + '\033[37;1m[' + merah + '\033[31;1m*' + tutup + '\033[37;1m] Username atau Password\033[31;1m Salah')
 
 
 
@@ -109,11 +109,11 @@ def menu():
         nama = a['name']
         id = a['id']
     except KeyError:
-        print tutup + '[' + kuning + '!' + tutup + '] Checkpoint'
+        print tutup + '\033[37;1m[' + kuning + '\033[31;1m*' + tutup + '\033[37;1m] Checkpoint'
         os.system('rm -rf logs.txt')
-        exit(tutup + '[' + merah + '!' + tutup + '] Exit' + tutup)
+        exit(tutup + '\033[37;1m[' + merah + '\033[31;1m*' + tutup + '\033[37;1m] Exit' + tutup)
     except requests.exceptions.ConnectionError:
-        exit(merah + '[!] No Connection')    
+        exit(merah + '\033[37;1m[\033[31;1m*\033[37;1m] No Connection')    
     os.system('clear')
     print ("""     __  __      ____                  _
     |  \/  |_ __| __ )  __ _  ___ ___ | |_                     | |\/| | __|  _ \ / _` |/ __/ _ \| __|                     | |  | | | _| |_) | (_| | (_| (_) | |_                     |_|  |_|_|(_)____/ \__,_|\___\___/ \__|                ---------------------------------------------                             [ TOOLS INFO ]
@@ -123,24 +123,24 @@ Name    : PePek Anjink
 Version : v1.9
 ---------------------------------------------""" )
     print
-    print tutup + '[' + putih + '$' + tutup + '] User : ' + lime + nama + tutup
+    print tutup + '\033[37;1m[' + putih + '\033[31;1m*' + tutup + '\033[37;1m] User : ' + nama + tutup
     print
-    print tutup + '(' + putih + '01' + tutup + ') informasi Akun Facebook'
-    print tutup + '(' + putih + '02' + tutup + ') Dapatkan ID/Gmail/Nope'
-    print tutup + '(' + putih + '03' + tutup + ') Tool Hack Facebook'
-    print tutup + '(' + putih + '04' + tutup + ') BoT'
-    print tutup + '(' + putih + '05' + tutup + ') Lihat status'
-    print tutup + '(' + putih + '06' + tutup + ') Profile guard'
-    print tutup + '(' + putih + '07' + tutup + ') Group list'
-    print tutup + '(' + putih + '08' + tutup + ') Big crack Akun Facebook'
-    print tutup + '(' + putih + '09' + tutup + ') Chek Akun Yang Terkait di Apps'
-    print tutup + '(' + putih + '10' + tutup + ') Hapus Token'
-    print tutup + '(' + putih + '11' + tutup + ') Info Tools'
-    print tutup + '(' + putih + '00' + tutup + ') Exit'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m01' + tutup + '\033[37;1]] informasi Akun Facebook'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m02' + tutup + '\033[37;1m] Dapatkan ID/Gmail/Nope'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m03' + tutup + '\033[37;1]] Tool Hack Facebook'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m04' + tutup + '\033[37;1]] BoT'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m05' + tutup + '\033[37;1m] Lihat status'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m06' + tutup + '\033[37;1m] Profile guard'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m07' + tutup + '\033[37;1m] Group list'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m08' + tutup + '\033[37;1m] Big crack Akun Facebook'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m09' + tutup + '\033[37;1m] Chek Akun Yang Terkait di Apps'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m10' + tutup + '\033[37;1m] Hapus Token'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m11' + tutup + '\033[37;1m] Info Tools'
+    print tutup + '\033[37;1m[' + putih + '\033[36;1m00' + tutup + '\033[37;1m] Exit'
     print
-    mana = raw_input(tutup + '[' + putih + 'Crott' + tutup + ']> ' + lime)
+    mana = raw_input(tutup + '\033[37;1m[' + putih + '\033[31;1mSelection' + tutup + '\033[37;1m]> '
     if mana == '':
-        exit(tutup + '[' + merah + '!' + tutup + '] Exit' + tutup)
+        exit(tutup + '\033[37;1m[' + merah + '\033[31;1m*' + tutup + '\033[37;1m] Exit' + tutup)
     elif mana in ('1', '01'):
         informasi()
     elif mana in ('2', '02'):
@@ -161,26 +161,26 @@ Version : v1.9
         acekpp()
     elif mana in ('10', ):
         os.remove('logs.txt')
-        exit(tutup + '[' + lime + '!' + tutup + '] Berhasil menghapus access token')
+        exit(tutup + '\033[37;1m[' + lime + '\033[31;1m*' + tutup + '\033[37;1m] Berhasil menghapus access token')
     elif mana in ('11', ):
         infotools()
     elif mana in ('0', '00'):
-        exit(tutup + '[' + merah + '!' + tutup + '] Exit' + tutup)
+        exit(tutup + '\033[37;1m[' + merah + '\033[31;1m*' + tutup + '\033[37;1m] Exit' + tutup)
     else:
-        exit(tutup + '[' + merah + '!' + tutup + '] Exit' + tutup)
+        exit(tutup + '\033[37;1m[' + merah + '\033[31;1m*' + tutup + '\033[37;1m] Exit' + tutup)
 
 def informasi():
     try:
        token = open('logs.txt').read()
     except:
-        print('Token Tidak Ada')
+        print('\033[37;1m[\033[31;1m*\033[37;1m] Token Tidak Ada')
     print
-    id = raw_input(tutup + '[' + lime + '+' + tutup + '] Search Name or ID : ' + lime)
+    id = raw_input(tutup + '\033[37;1m[' + lime + '\033[33;1m*' + tutup + '\033[37;1m] Search Name or ID : '
     if id == '':
-        print tutup + '[' + merah + '!' + tutup + '] Masukkan' + tutup
+        print tutup + '\033[37;1m[' + merah + '\033[33;1m*' + tutup + '\033[37;1m] Masukkan' + tutup
         raw_input(tutup + '\nBack ...')
         menu()
-    print tutup + '[' + lime + '*' + tutup + '] Searching ...'
+    print tutup + '\033[37;1m[' + lime + '\033[33;1m*' + tutup + '\033[37;1m] Searching ...'
     r = requests.get('https://graph.facebook.com/me/friends?access_token=' + token)
     q = json.loads(r.text)
     for i in q['data']:
@@ -189,62 +189,62 @@ def informasi():
             b = json.loads(a.text)
             print
             try:
-                print tutup + '[' + lime + '+' + tutup + '] Name : ' + lime + b['name']
+                print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Name : ' + b['name']
             except KeyError:
                 pass
             else:
                 try:
-                    print tutup + '[' + lime + '+' + tutup + '] First name : ' + lime + b['first_name']
+                    print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] First name : ' + b['first_name']
                 except KeyError:
                     pass
                 else:
                     try:
-                        print tutup + '[' + lime + '+' + tutup + '] Middle name : ' + lime + b['middle_name']
+                        print tutup + '\033[37;1m[' + lime + '\033[32:1m*' + tutup + '\033[37;1m] Middle name : ' + b['middle_name']
                     except KeyError:
                         pass
                     else:
                         try:
-                            print tutup + '[' + lime + '+' + tutup + '] Last name : ' + lime + b['last_name']
+                            print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Last name : ' + b['last_name']
                         except KeyError:
                             pass
                         else:
                             try:
-                                print tutup + '[' + lime + '+' + tutup + '] ID : ' + lime + b['id']
+                                print tutup + '\033[37;1m[' + lime + '\033[32;1m' + tutup + '\033[37;1m] ID : ' + b['id']
                             except KeyError:
                                 pass
                             else:
                                 try:
-                                    print tutup + '[' + lime + '+' + tutup + '] Username : ' + lime + b['username']
+                                    print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Username : ' + b['username']
                                 except KeyError:
                                     pass
                                 else:
                                     try:
-                                        print tutup + '[' + lime + '+' + tutup + '] Email : ' + lime + b['email']
+                                        print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Email : ' + b['email']
                                     except KeyError:
                                         pass
                                     else:
                                         try:
-                                            print tutup + '[' + lime + '+' + tutup + '] Mobile phone : ' + lime + b['mobile_phone']
+                                            print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Mobile phone : ' + b['mobile_phone']
                                         except KeyError:
                                             pass
                                         else:
                                             try:
-                                                print tutup + '[' + lime + '+' + tutup + '] Locale : ' + lime + b['locale'].split('_')[0]
+                                                print tutup + '\033[37;1m[' + lime + '\033[32;1m' + tutup + '\033[37;1m] Locale : ' + b['locale'].split('_')[0]
                                             except KeyError:
                                                 pass
                                             else:
                                                 try:
-                                                    print tutup + '[' + lime + '+' + tutup + '] Location : ' + lime + b['location']['name']
+                                                    print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Location : ' + b['location']['name']
                                                 except KeyError:
                                                     pass
                                                 else:
                                                     try:
-                                                        print tutup + '[' + lime + '+' + tutup + '] Hometown : ' + lime + b['hometown']['name']
+                                                        print tutup + '\033[37;1m[' + lime + '\033[32;1m*' + tutup + '\033[37;1m] Hometown : ' + b['hometown']['name']
                                                     except KeyError:
                                                         pass
                                                     else:
                                                         try:
-                                                            print tutup + '[' + lime + '+' + tutup + '] Gender : ' + lime + b['gender']
+                                                            print tutup + '\033[37;1m[' + lime + '+' + tutup + '] Gender : ' + lime + b['gender']
                                                         except KeyError:
                                                             pass
 
